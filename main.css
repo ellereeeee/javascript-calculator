@@ -63,10 +63,29 @@ table {
 
 /*
   ========================================
+  Calculator
+  ========================================
+*/
+
+.calculator {
+  background-color: black;
+  color: #FFF;
+  height: 28em;
+  width: 20em;
+}
+
+/*
+  ========================================
   Buttons
   ========================================
 */
 
 .btn {
+  border: 2px solid skyblue;
   width: 25%;
+}
+
+.big-btn {
+  border: 2px solid skyblue;
+  width: 50%;
 }
