@@ -70,8 +70,7 @@ table {
 .calculator {
   background-color: black;
   color: #FFF;
-  height: 28em;
-  width: 20em;
+  height: 100vh;
 }
 
 /*
@@ -82,10 +81,14 @@ table {
 
 .btn {
   border: 2px solid skyblue;
-  width: 25%;
+  display: inline-block;
+  height: 14vh;
+  width: 23%;
 }
 
 .big-btn {
   border: 2px solid skyblue;
+  display: inline-block;
+  height: 14vh;
   width: 50%;
 }
