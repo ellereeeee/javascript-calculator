@@ -71,6 +71,23 @@ table {
   background-color: black;
   color: #FFF;
   height: 100vh;
+  text-align: center;
+}
+
+/*
+  ========================================
+  Displays
+  ========================================
+*/
+
+.exp-display {
+  border: 2px solid skyblue;
+  height: 14vh;
+}
+
+.sol-display {
+  border: 2px solid skyblue;
+  height: 14vh;
 }
 
 /*
