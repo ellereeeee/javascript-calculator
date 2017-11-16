@@ -48,6 +48,16 @@ table {
 }
 
 /*
+  =======================================
+  Custom Styles
+  =======================================
+*/
+
+div {
+  border: 2px solid skyblue;
+}
+
+/*
   ========================================
   Grid
   ========================================
@@ -68,6 +78,7 @@ table {
 */
 
 .calculator {
+  border: 0;
   background-color: black;
   color: #FFF;
   height: 100vh;
@@ -81,12 +92,10 @@ table {
 */
 
 .exp-display {
-  border: 2px solid skyblue;
   height: 9.71vh;
 }
 
 .sol-display {
-  border: 2px solid skyblue;
   height: 18.89vh;
 }
 
@@ -97,14 +106,12 @@ table {
 */
 
 .btn {
-  border: 2px solid skyblue;
   display: inline-block;
   height: 14.28vh;
   width: 25%;
 }
 
 .big-btn {
-  border: 2px solid skyblue;
   display: inline-block;
   height: 14.28vh;
   width: 50%;
