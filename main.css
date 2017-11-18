@@ -87,6 +87,34 @@ div {
 
 /*
   ========================================
+  Flex Box
+  ========================================
+*/
+
+.flex-buttons-container {
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5%;
+}
+
+/*
+  ========================================
   Calculator
   ========================================
 */
@@ -96,7 +124,6 @@ div {
   background-color: #BDBDBD;
   color: #FFF;
   height: 100vh;
-  text-align: center;
 }
 
 /*
@@ -110,6 +137,7 @@ div {
 }
 
 .sol-display {
+  font-size: 2.5em;
   height: 18.89vh;
 }
 
@@ -120,13 +148,11 @@ div {
 */
 
 .btn {
-  display: inline-block;
   height: 14.28vh;
   width: 25%;
 }
 
 .big-btn {
-  display: inline-block;
   height: 14.28vh;
   width: 50%;
 }
