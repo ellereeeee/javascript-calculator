@@ -58,6 +58,19 @@ div {
   font-family: 'Roboto', sans-serif;
 }
 
+.btn-pri-color {
+  background-color: #512da8;
+}
+
+.btn-sec-color {
+  background-color: #673AB7;
+}
+
+.display-color {
+  background-color: #ff4081;
+}
+
+
 /*
   ========================================
   Grid
@@ -80,7 +93,7 @@ div {
 
 .calculator {
   border: 0;
-  background-color: black;
+  background-color: #BDBDBD;
   color: #FFF;
   height: 100vh;
   text-align: center;
@@ -93,12 +106,10 @@ div {
 */
 
 .exp-display {
-  background-color: #ff4081;
   height: 9.71vh;
 }
 
 .sol-display {
-  background-color: #ff4081;
   height: 18.89vh;
 }
 
@@ -107,14 +118,6 @@ div {
   Buttons
   ========================================
 */
-
-.btn-pri-color {
-  background-color: #512da8;
-}
-
-.btn-sec-color {
-  background-color: #673AB7;
-}
 
 .btn {
   display: inline-block;
