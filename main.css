@@ -132,6 +132,7 @@ div {
 .calculator {
   border: 0;
   background-color: #BDBDBD;
+  font-weight: 100;
   color: #FFF;
   height: 100vh;
 }
@@ -144,12 +145,14 @@ div {
 
 .exp-display {
   border-bottom: 0;
+  font-weight: 400;
   height: 9.71vh;
 }
 
 .sol-display {
   border-top: 0;
   font-size: 2.2em;
+  font-weight: 400;
   height: 18.89vh;
 }
 
