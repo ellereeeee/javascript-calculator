@@ -54,7 +54,7 @@ table {
 */
 
 div {
-  border: 2px solid skyblue;
+  border: .01em solid #BDBDBD;
 }
 
 /*
@@ -92,10 +92,12 @@ div {
 */
 
 .exp-display {
+  background-color: #ff4081;
   height: 9.71vh;
 }
 
 .sol-display {
+  background-color: #ff4081;
   height: 18.89vh;
 }
 
@@ -104,6 +106,14 @@ div {
   Buttons
   ========================================
 */
+
+.btn-pri-color {
+  background-color: #512da8;
+}
+
+.btn-sec-color {
+  background-color: #673AB7;
+}
 
 .btn {
   display: inline-block;
