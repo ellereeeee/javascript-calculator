@@ -54,7 +54,7 @@ table {
 */
 
 div {
-  border: .01em solid #BDBDBD;
+  border: .01em solid #BDBDBD; /* the border color functions as the divider color */
   font-family: 'Roboto', sans-serif;
 }
 
