@@ -59,6 +59,14 @@ div {
   font-size: 1.3em;
 }
 
+button {
+  border: .01em solid #BDBDBD; /* the border color functions as the divider color */
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  font-weight: 100;
+}
+
 .btn-pri-color {
   background-color: #455a64;
 }
@@ -132,7 +140,6 @@ div {
 .calculator {
   border: 0;
   background-color: #BDBDBD;
-  font-weight: 100;
   color: #FFF;
   height: 100vh;
 }
