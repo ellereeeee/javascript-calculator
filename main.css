@@ -178,3 +178,16 @@ button {
   height: 14.28vh;
   width: 50%;
 }
+
+/*
+  ========================================
+  Media Queries
+  ========================================
+*/ 
+
+/* make calculator not full-screen for PCs */
+@media screen and (min-width: 1000px) {
+  
+}
+
+
