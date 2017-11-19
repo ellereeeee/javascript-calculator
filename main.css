@@ -53,6 +53,11 @@ table {
   =======================================
 */
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 div {
   border: .01em solid #BDBDBD; /* the border color functions as the divider color */
   font-family: 'Roboto', sans-serif;
@@ -185,9 +190,32 @@ button {
   ========================================
 */ 
 
-/* make calculator not full-screen for PCs */
+/* make calculator not full-screen for PCs. dimensions are half of mobile measurements */
 @media screen and (min-width: 1000px) {
-  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Calculator */
+  .calculator {
+    height: 70vh;
+    width: 23%;
+  }
+  /* Displays */
+  .exp-display {
+    height: 6.797vh;
+  }
+  .sol-display {
+    height: 13.223vh;
+  }
+  /* Buttons */
+  .btn {
+    height: 9.996vh;
+  }
+  .big-btn {
+    height: 9.996vh;
+  }
 }
 
 
