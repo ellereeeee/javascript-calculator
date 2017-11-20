@@ -126,6 +126,7 @@ button {
   flex-wrap: nowrap;
   justify-content: flex-end;
   padding-right: 5%;
+  padding-left: 5%;
 }
 
 .right-bottom {
@@ -133,7 +134,7 @@ button {
   align-items: flex-end;
   flex-wrap: nowrap;
   justify-content: flex-end;
-  padding-right: 5%;
+  padding: 0 5%;
 }
 
 /*
