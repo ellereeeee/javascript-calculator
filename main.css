@@ -143,8 +143,9 @@ button {
 */
 
 .calculator {
-  border: 0;
   background-color: #BDBDBD;
+  border: 0;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   color: #FFF;
   height: 100vh;
 }
