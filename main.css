@@ -72,6 +72,12 @@ button {
   font-weight: 100;
 }
 
+button .ripple {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+}
+
 .btn-pri-color {
   background-color: #455a64;
 }
