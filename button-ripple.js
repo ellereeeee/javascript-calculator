@@ -1,5 +1,7 @@
-/* This code is from https://github.com/GeekLaunch/button-ripple-effect
-I studied the tutorial and incorporated it into my code. */
+/* 
+This code is from https://github.com/GeekLaunch/button-ripple-effect
+I studied the tutorial and incorporated it into my code. 
+*/
 
 var buttons = document.getElementsByTagName('button'); // put buttons into array
 
@@ -8,6 +10,9 @@ Array.prototype.forEach.call(buttons, function (b) {
 }); // add click event called "createRipple" for each button
 
 function createRipple (e) {
+  if (this.getElementsByClassName('ripple').length > 0) {
+    this.removeChild(this.childNodes[1]);
+  }
   var circle = document.createElement('div');
   this.appendChild(circle);
   
