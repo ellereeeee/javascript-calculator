@@ -70,6 +70,8 @@ button {
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
   font-weight: 100;
+  overflow: hidden;
+  position: relative;
 }
 
 button .ripple {
