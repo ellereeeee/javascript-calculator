@@ -12,5 +12,8 @@ function createRipple (e) {
   
   circle.style.width = circle.style.height = d + 'px';
   
+  circle.style.left = e.clientX - this.offsetLeft - d/2 + 'px';
+  circle.style.top = e.clientY - this.offsetTop - d/2 + 'px';
+  
   circle.classList.add('ripple');
 }
