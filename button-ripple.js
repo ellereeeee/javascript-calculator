@@ -12,7 +12,7 @@ Array.prototype.forEach.call(buttons, function (b) {
 function createRipple (e) {
   if (this.getElementsByClassName('ripple').length > 0) {
     this.removeChild(this.childNodes[1]);
-  }
+  } // limit number of circle divs created
   var circle = document.createElement('div');
   this.appendChild(circle);
   
