@@ -22,3 +22,14 @@ var state = {
   EQUALS: 8 // equals
 }
 
+// This contains variables that will change like the display
+var calc = {
+  
+  // variables that change
+  state: state.DEFAULT, // let the state change
+  display: "", // what's on the display
+  exp_disp: "", // what's on the expression display
+  arg_1: "", // argument 1
+  arg_2: "", // argument 2
+  op: "" // the operator
+}
