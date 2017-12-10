@@ -8,3 +8,17 @@ var key_type = {
   DEC: 6, // decimal
   EQUALS: 7 // equals
 }
+
+// We need to track the state so each step only has certain options available to it. For example, we shouldn't be able to
+// add another decimal once we're already in the decimal state.
+var state = {
+  DEFAULT: 1, // the default state, 0
+  FIRST_ARG: 2, // first argument
+  FIRST_ARG_FLOAT: 3, // first argument as float
+  OP: 4, // operator
+  SEC_ARG: 5, // second argument
+  SEC_ARG_FLOAT: 6, // second argument as float
+  SEC_ARG_DECIMAL: 7, // second argument as "0."
+  EQUALS: 8 // equals
+}
+
