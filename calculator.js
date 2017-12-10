@@ -28,24 +28,34 @@ var calc = {
   
   // variables that change
   state: states.DEFAULT, // let the state change
-  display: 0, // what's on the display. The default state is 0.
+  display: "", // what's on the display. The default state is 0.
   exp_disp: "", // what's on the expression display
   arg_1: "", // argument 1
   arg_2: "", // argument 2
-  op: "" // the operator
+  op: "", // the operator
   
-  function doStep(key_type, key) {
+  doStep: function(key_type, key) {
     switch (this.state) {
       case states.DEFAULT:
         if (key_type === key_types.NUM) {
           this.setDisp(key);
+          this.updateDisp(this.display);
           this.state = states.FIRST_ARG;
+          console.log(display);
         }
+        break;
     } // end of switch statement
-  } // end of doStep function
+  }, // end of doStep function
   
-  function setDisp(key) {
-    this.display = key;
-  }
+  setDisp: function(key) {
+    this.display += key;
+  },
 
+  updateDisp: function(text) {
+    $("#display").text(text);
+  }
 } // end of calc object
+
+$(".digit").on("click", function(){
+  calc.doStep(key_types.NUM, $(this).html());
+})
