@@ -46,6 +46,9 @@ var calc = {
       case states.FIRST_ARG:
         if (key_type === key_types.NUM) {
           this.appendDisp(key);
+        } else if (key_type === key_types.DEC) {
+          this.appendDisp(key);
+          this.state = states.FIRST_ARG_FLOAT;
         }
         break;
     } // end of switch statement
@@ -68,4 +71,8 @@ var calc = {
 
 $(".digit").on("click", function(){
   calc.doStep(key_types.NUM, $(this).html());
+})
+
+$("#decimal").on("click", function(){
+  calc.doStep(key_types.DEC, $(this).html());
 })
