@@ -50,6 +50,8 @@ var calc = {
         } else if (key_type === key_types.DEC) {
           this.appendDisp(key);
           this.state = states.FIRST_ARG_FLOAT;
+        } else if (key_type === key_types.REV) {
+          this.reverseNum();
         }
         break;
     } // end of switch statement
@@ -68,11 +70,13 @@ var calc = {
   },
   
   // make positive numbers negative and vice versa
-  reverseNum: function(key) {
+  reverseNum: function() {
     if (this.display > 0) {
       this.display = -Math.abs(this.display);
+      this.updateDisp(this.display);
     } else if (this.display < 0) {
       this.display = Math.abs(this.display);
+      this.updateDisp(this.display);
     }
   },
   
