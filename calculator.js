@@ -39,16 +39,26 @@ var calc = {
       case states.DEFAULT:
         if (key_type === key_types.NUM) {
           this.setDisp(key);
-          this.updateDisp(this.display);
           this.state = states.FIRST_ARG;
-          console.log(display);
+        }
+        break;
+        
+      case states.FIRST_ARG:
+        if (key_type === key_types.NUM) {
+          this.appendDisp(key);
         }
         break;
     } // end of switch statement
   }, // end of doStep function
   
   setDisp: function(key) {
+    this.display = key;
+    this.updateDisp(this.display);
+  },
+  
+  appendDisp: function(key) {
     this.display += key;
+    this.updateDisp(this.display);
   },
 
   updateDisp: function(text) {
