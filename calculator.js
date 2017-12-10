@@ -66,7 +66,16 @@ var calc = {
     this.display += key;
     this.updateDisp(this.display);
   },
-
+  
+  // make positive numbers negative and vice versa
+  reverseNum: function(key) {
+    if (this.display > 0) {
+      this.display = -Math.abs(this.display);
+    } else if (this.display < 0) {
+      this.display = Math.abs(this.display);
+    }
+  },
+  
   // update the html display
   updateDisp: function(text) {
     $("#display").text(text);
