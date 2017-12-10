@@ -34,6 +34,7 @@ var calc = {
   arg_2: "", // argument 2
   op: "", // the operator
   
+  // implement the FSM
   doStep: function(key_type, key) {
     switch (this.state) {
       case states.DEFAULT:
@@ -54,29 +55,34 @@ var calc = {
     } // end of switch statement
   }, // end of doStep function
   
+  // change display
   setDisp: function(key) {
     this.display = key;
     this.updateDisp(this.display);
   },
   
+  // add number to display
   appendDisp: function(key) {
     this.display += key;
     this.updateDisp(this.display);
   },
 
+  // update the html display
   updateDisp: function(text) {
     $("#display").text(text);
   }
 } // end of calc object
 
-$(".digit").on("click", function(){
+
+// add event handlers for buttons
+$(".digit").on("click", function() {
   calc.doStep(key_types.NUM, $(this).html());
 })
 
-$("#decimal").on("click", function(){
+$("#decimal").on("click", function() {
   calc.doStep(key_types.DEC, $(this).html());
 })
 
-$("#reverse").on("click", function(){
+$("#reverse").on("click", function() {
   calc.doStep(key_types.REV, $(this).html());
 })
