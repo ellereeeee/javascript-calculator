@@ -1,5 +1,5 @@
 // Having a number for each key type helps ensure the right function is executed when a button is pressed.
-var key_type = {
+var key_types = {
   NUM: 1, // numbers
   OP_KEY: 2, // operator
   PERC: 3, // percent key
@@ -35,7 +35,10 @@ var calc = {
   op: "" // the operator
   
   function doStep(key_type, key) {
-  
-    } // end of state.DEFALT
+    switch (this.state) {
+      case states.DEFAULT:
+        if (key_type === key_types.NUM) {
+        }
+    } // end of switch statement
   } // end of doStep function
 } // end of calc object
