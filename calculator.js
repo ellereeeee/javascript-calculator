@@ -11,7 +11,7 @@ var key_type = {
 
 // We need to track the state so each step only has certain options available to it. For example, we shouldn't be able to
 // add another decimal once we're already in the decimal state.
-var state = {
+var states = {
   DEFAULT: 1, // the default state, 0
   FIRST_ARG: 2, // first argument
   FIRST_ARG_FLOAT: 3, // first argument as float
@@ -22,14 +22,20 @@ var state = {
   EQUALS: 8 // equals
 }
 
-// This contains variables that will change like the display
+// This contains properties that will change like the display, functions for the operators, and the implementation of
+// a finite state machine in the form of a method.
 var calc = {
   
   // variables that change
-  state: state.DEFAULT, // let the state change
+  state: states.DEFAULT, // let the state change
   display: "", // what's on the display
   exp_disp: "", // what's on the expression display
   arg_1: "", // argument 1
   arg_2: "", // argument 2
   op: "" // the operator
-}
+  
+  function doStep(key_type, key) {
+  
+    } // end of state.DEFALT
+  } // end of doStep function
+} // end of calc object
