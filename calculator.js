@@ -38,7 +38,14 @@ var calc = {
     switch (this.state) {
       case states.DEFAULT:
         if (key_type === key_types.NUM) {
+          this.setDisp(key);
+          this.state = states.FIRST_ARG;
         }
     } // end of switch statement
   } // end of doStep function
+  
+  function setDisp(key) {
+    this.display = key;
+  }
+
 } // end of calc object
