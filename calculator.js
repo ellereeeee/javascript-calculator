@@ -76,3 +76,7 @@ $(".digit").on("click", function(){
 $("#decimal").on("click", function(){
   calc.doStep(key_types.DEC, $(this).html());
 })
+
+$("#reverse").on("click", function(){
+  calc.doStep(key_types.REV, $(this).html());
+})
