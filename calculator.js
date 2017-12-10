@@ -47,10 +47,12 @@ var calc = {
       case states.FIRST_ARG:
         if (key_type === key_types.NUM) {
           this.appendDisp(key);
-        } else if (key_type === key_types.DEC) {
+        } 
+        if (key_type === key_types.DEC) {
           this.appendDisp(key);
           this.state = states.FIRST_ARG_FLOAT;
-        } else if (key_type === key_types.REV) {
+        } 
+        if (key_type === key_types.REV) {
           this.reverseNum();
         }
         break;
