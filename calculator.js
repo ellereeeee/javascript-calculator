@@ -110,6 +110,10 @@ $(".digit").on("click", function() {
   calc.doStep(key_types.NUM, $(this).html());
 })
 
+$(".operator").on("click", function() {
+  calc.doStep(key_types.DEC, $(this).html());
+})
+
 $("#decimal").on("click", function() {
   calc.doStep(key_types.DEC, $(this).html());
 })
