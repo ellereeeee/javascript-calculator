@@ -62,7 +62,9 @@ var calc = {
         break;
         
       case states.FIRST_ARG_FLOAT:
-        
+        if (key_type === key_types.NUM) {
+          this.appendDisp(key);
+        }
     } // end of switch statement
   }, // end of doStep function
   
