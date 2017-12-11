@@ -55,6 +55,10 @@ var calc = {
         if (key_type === key_types.REV) {
           this.reverseNum();
         }
+        if (key_type === key_types.PERC) {
+          this.setDisp(0);
+          this.state = states.DEFAULT;
+        }
         break;
     } // end of switch statement
   }, // end of doStep function
@@ -100,4 +104,8 @@ $("#decimal").on("click", function() {
 
 $("#reverse").on("click", function() {
   calc.doStep(key_types.REV, $(this).html());
+})
+
+$("#percent").on("click", function() {
+  calc.doStep(key_types.PERC, $(this).html());
 })
