@@ -65,6 +65,9 @@ var calc = {
         if (key_type === key_types.NUM) {
           this.appendDisp(key);
         }
+        if (key_type === key_types.REV) {
+          this.reverseNum();
+        }
     } // end of switch statement
   }, // end of doStep function
   
