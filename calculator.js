@@ -78,6 +78,12 @@ var calc = {
           this.setDisp(0);
           this.state = states.DEFAULT;
         }
+        if (key_type === key_types.OP_KEY) {
+          this.arg_1 = this.display;
+          this.op = key;
+          this.updateExpDisp(this.arg_1, this.op);
+          this.state = states.OP;
+        }
     } // end of switch statement
   }, // end of doStep function
   
@@ -111,7 +117,7 @@ var calc = {
   
   // update the expression display
   updateExpDisp: function(arg1, op) {
-    $("#exp_display").text(arg1 + op);
+    $("#exp_display").text(arg1 + " " + op);
 }
 
 } // end of calc object
