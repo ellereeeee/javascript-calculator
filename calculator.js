@@ -60,6 +60,9 @@ var calc = {
           this.state = states.DEFAULT;
         }
         break;
+        
+      case states.FIRST_ARG_FLOAT:
+        
     } // end of switch statement
   }, // end of doStep function
   
