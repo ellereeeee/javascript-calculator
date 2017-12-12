@@ -29,7 +29,6 @@ var calc = {
   // variables that change
   state: states.DEFAULT, // let the state change
   display: "", // what's on the display. The default state is 0.
-  exp_disp: "", // what's on the expression display
   arg_1: "", // argument 1
   arg_2: "", // argument 2
   op: "", // the operator
