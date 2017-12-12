@@ -130,7 +130,7 @@ var calc = {
   // update the expression display
   updateExpDisp: function(arg1, op) {
     $("#exp_display").text(arg1 + " " + op);
-}
+  },
 
 } // end of calc object
 
@@ -158,4 +158,4 @@ $("#percent").on("click", function() {
 
 $("#equals").on("click", function() {
   calc.doStep(key_types.EQUALS, $(this).html());
-}
+})
