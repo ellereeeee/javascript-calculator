@@ -84,11 +84,16 @@ var calc = {
           this.updateExpDisp(this.arg_1, this.op);
           this.state = states.OP;
         }
+        break;
         
       case states.OP:
         if (key_type === key_types.NUM) {
           this.setDisp(key);
           this.state = states.SEC_ARG;
+        }
+        if (key_type === key_types.DEC) {
+          this.setDisp("0.");
+          this.state = states.SEC_ARG_DECIMAL;
         }
         break;
     } // end of switch statement
