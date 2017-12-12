@@ -155,3 +155,7 @@ $("#reverse").on("click", function() {
 $("#percent").on("click", function() {
   calc.doStep(key_types.PERC, $(this).html());
 })
+
+$("#equals").on("click", function() {
+  calc.doStep(key_types.EQUALS, $(this).html());
+}
