@@ -95,6 +95,10 @@ var calc = {
           this.setDisp("0.");
           this.state = states.SEC_ARG_DECIMAL;
         }
+        if (key_type === key_types.EQUALS) {
+          this.clearExpDisp();
+          this.state = states.FIRST_ARG;
+        }
         break;
     } // end of switch statement
   }, // end of doStep function
@@ -131,6 +135,11 @@ var calc = {
   updateExpDisp: function(arg1, op) {
     $("#exp_display").text(arg1 + " " + op);
   },
+  
+  // reset exp_disp variable and clear exp_display on broswser
+  clearExpDisp: function() {
+    $("#exp_display").text("");
+  }
 
 } // end of calc object
 
