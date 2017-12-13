@@ -131,7 +131,8 @@ var calc = {
     }
   },
   
-  // handle +, −, ×, and ÷ operations. We use a function instead of eval() because eval() voids engine optimizations.
+  // handle +, −, ×, and ÷ operations. 
+  // We use a function instead of eval() because eval() voids engine optimizations.
   operation: function() {
     switch (this.op) {
       case "+":
