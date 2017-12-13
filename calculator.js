@@ -101,6 +101,9 @@ var calc = {
         break;
         
       case states.SEC_ARG:
+        if (key_type === key_types.EQUALS) {
+          this.operation();
+        }
         break;
     } // end of switch statement
   }, // end of doStep function
@@ -126,6 +129,32 @@ var calc = {
       this.display = Math.abs(this.display);
       this.updateDisp(this.display);
     }
+  },
+  
+  // handle +, −, ×, and ÷ operations. We use a function instead of eval() because eval() voids engine optimizations.
+  operation: function() {
+    switch (this.op) {
+      case "+":
+        this.arg_2 = this.display;
+        this.display = Number(this.arg_1) + Number(this.arg_2);
+        this.updateDisp(this.display);
+        this.clearExpDisp();        
+      case "−":
+        this.arg_2 = this.display;
+        this.display = Number(this.arg_1) - Number(this.arg_2);
+        this.updateDisp(this.display);
+        this.clearExpDisp();
+      case "×":
+        this.arg_2 = this.display;
+        this.display = Number(this.arg_1) * Number(this.arg_2);
+        this.updateDisp(this.display);
+        this.clearExpDisp();
+      case "÷":
+        this.arg_2 = this.display;
+        this.display = Number(this.arg_1) / Number(this.arg_2);
+        this.updateDisp(this.display);
+        this.clearExpDisp();
+    } // end of switch statement
   },
   
   // update the html display
