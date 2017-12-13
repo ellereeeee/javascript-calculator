@@ -99,6 +99,9 @@ var calc = {
           this.state = states.FIRST_ARG;
         }
         break;
+        
+      case states.SEC_ARG:
+        break;
     } // end of switch statement
   }, // end of doStep function
   
