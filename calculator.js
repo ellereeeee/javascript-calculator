@@ -139,22 +139,26 @@ var calc = {
         this.arg_2 = this.display;
         this.display = Number(this.arg_1) + Number(this.arg_2);
         this.updateDisp(this.display);
-        this.clearExpDisp();        
+        this.clearExpDisp();
+        break;
       case "−":
         this.arg_2 = this.display;
         this.display = Number(this.arg_1) - Number(this.arg_2);
         this.updateDisp(this.display);
         this.clearExpDisp();
+        break;
       case "×":
         this.arg_2 = this.display;
         this.display = Number(this.arg_1) * Number(this.arg_2);
         this.updateDisp(this.display);
         this.clearExpDisp();
+        break;
       case "÷":
         this.arg_2 = this.display;
         this.display = Number(this.arg_1) / Number(this.arg_2);
         this.updateDisp(this.display);
         this.clearExpDisp();
+        break;
     } // end of switch statement
   },
   
