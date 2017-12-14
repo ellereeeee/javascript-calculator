@@ -103,6 +103,7 @@ var calc = {
       case states.SEC_ARG:
         if (key_type === key_types.EQUALS) {
           this.operation();
+          this.state = states.EQUALS;
         }
         if (key_type === key_types.NUM) {
           this.appendDisp(key);
