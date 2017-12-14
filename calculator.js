@@ -110,6 +110,9 @@ var calc = {
         if (key_type === key_types.REV) {
           this.reverseNum();
         }
+        if (key_type === key_types.PERC) {
+          this.percentify();
+        }
         break;
     } // end of switch statement
   }, // end of doStep function
@@ -166,6 +169,12 @@ var calc = {
         this.clearExpDisp();
         break;
     } // end of switch statement
+  },
+  
+  // find arg_2 percentage of arg_1
+  percentify: function() {
+    this.display = (this.arg_1 * this.display/100);
+    this.updateDisp(this.display);
   },
   
   // update the html display
