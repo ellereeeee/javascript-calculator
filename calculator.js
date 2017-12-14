@@ -104,6 +104,9 @@ var calc = {
         if (key_type === key_types.EQUALS) {
           this.operation();
         }
+        if (key_type === key_types.NUM) {
+          this.appendDisp(key);
+        }
         break;
     } // end of switch statement
   }, // end of doStep function
