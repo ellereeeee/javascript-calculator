@@ -135,6 +135,9 @@ var calc = {
         if (key_type === key_types.REV) {
           this.reverseNum();
         }
+        if (key_type === key_types.PERC) {
+          this.percentify();
+        }
     } // end of switch statement
   }, // end of doStep function
   
