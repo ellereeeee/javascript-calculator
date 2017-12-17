@@ -140,6 +140,7 @@ var calc = {
           this.percentify();
         }
         if (key_type === key_types.EQUALS) {
+          this.arg_2 = this.display;
           this.operation();
           this.state = states.EQUALS;
         }
