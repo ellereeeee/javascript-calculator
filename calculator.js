@@ -102,6 +102,7 @@ var calc = {
         
       case states.SEC_ARG:
         if (key_type === key_types.EQUALS) {
+          this.arg_2 = this.display;
           this.operation();
           this.state = states.EQUALS;
         }
@@ -145,7 +146,11 @@ var calc = {
         break;
         
       case states.EQUALS:
-        
+        if (key_type === key_types.EQUALS) {
+          this.arg_1 = this.display;
+          this.operation();
+        }
+        break;
     } // end of switch statement
   }, // end of doStep function
   
@@ -177,25 +182,21 @@ var calc = {
   operation: function() {
     switch (this.op) {
       case "+":
-        this.arg_2 = this.display;
         this.display = Number(this.arg_1) + Number(this.arg_2);
         this.updateDisp(this.display);
         this.clearExpDisp();
         break;
       case "−":
-        this.arg_2 = this.display;
         this.display = Number(this.arg_1) - Number(this.arg_2);
         this.updateDisp(this.display);
         this.clearExpDisp();
         break;
       case "×":
-        this.arg_2 = this.display;
         this.display = Number(this.arg_1) * Number(this.arg_2);
         this.updateDisp(this.display);
         this.clearExpDisp();
         break;
       case "÷":
-        this.arg_2 = this.display;
         this.display = Number(this.arg_1) / Number(this.arg_2);
         this.updateDisp(this.display);
         this.clearExpDisp();
