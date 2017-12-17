@@ -138,6 +138,14 @@ var calc = {
         if (key_type === key_types.PERC) {
           this.percentify();
         }
+        if (key_type === key_types.EQUALS) {
+          this.operation();
+          this.state = states.EQUALS;
+        }
+        break;
+        
+      case states.EQUALS:
+        
     } // end of switch statement
   }, // end of doStep function
   
