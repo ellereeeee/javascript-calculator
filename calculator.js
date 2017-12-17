@@ -122,6 +122,10 @@ var calc = {
           this.updateExpDisp(this.arg_1, this.op);
           this.state = states.OP;
         }
+        if (key_type === key_types.DEC) {
+          this.appendDisp(key);
+          this.state = states.SEC_ARG_FLOAT;
+        } 
         break;
     } // end of switch statement
   }, // end of doStep function
