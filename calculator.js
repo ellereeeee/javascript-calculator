@@ -171,6 +171,9 @@ var calc = {
           this.updateExpDisp(this.arg_1, this.op);
           this.state = states.OP;
         }
+        if (key_type === key_types.REV) {
+          this.reverseNum();
+        }
         break;
     } // end of switch statement
   }, // end of doStep function
