@@ -151,6 +151,13 @@ var calc = {
           this.arg_1 = this.display;
           this.operation();
         }
+        if (key_type === key_types.OP_KEY) {
+          this.clearExpDisp();
+          this.arg_1 = this.display;
+          this.op = key;
+          this.updateExpDisp(this.arg_1, this.op);
+          this.state = states.OP;
+        }
         break;
     } // end of switch statement
   }, // end of doStep function
