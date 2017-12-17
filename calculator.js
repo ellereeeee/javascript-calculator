@@ -95,8 +95,9 @@ var calc = {
           this.state = states.SEC_ARG_DECIMAL;
         }
         if (key_type === key_types.EQUALS) {
-          this.clearExpDisp();
-          this.state = states.FIRST_ARG;
+          this.arg_2 = this.display;
+          this.operation();
+          this.state = states.EQUALS;
         }
         break;
         
