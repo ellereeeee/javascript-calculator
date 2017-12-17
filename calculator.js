@@ -146,6 +146,18 @@ var calc = {
         }
         break;
         
+      case states.SEC_ARG_DECIMAL:
+        if (key_type === key_types.NUM) {
+          this.appendDisp(key);
+          this.state = state.SEC_ARG_FLOAT;
+        }
+        if (key_type === key_types.EQUALS) {
+          this.arg_2 = this.display;
+          this.operation();
+          this.state = states.EQUALS;
+        }
+        break;
+        
       case states.EQUALS:
         if (key_type === key_types.EQUALS) {
           this.arg_1 = this.display;
