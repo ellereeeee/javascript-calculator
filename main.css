@@ -93,8 +93,16 @@ button .ripple {
   background-color: #455a64;
 }
 
+.btn-pri-color:active {
+  background-color: #607d8b;
+}
+
 .btn-sec-color {
   background-color: #607d8b;
+}
+
+.btn-sec-color:active {
+  background-color: #00bcd4;
 }
 
 .display-color {
