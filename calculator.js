@@ -201,6 +201,15 @@ var calc = {
     }
   },
   
+  // clear all data and go to default state
+  allClear: function() {
+    this.state = states.DEFAULT;
+    this.arg_1 = "";
+    this.arg_2 = ""; 
+    this.op = ""; 
+    this.setDisp(0);
+  },
+  
   // handle +, −, ×, and ÷ operations. 
   // We use a function instead of eval() because eval() voids engine optimizations.
   operation: function() {
