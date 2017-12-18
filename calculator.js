@@ -201,15 +201,6 @@ var calc = {
     }
   },
   
-  // clear all data and go to default state
-  allClear: function() {
-    this.state = states.DEFAULT;
-    this.arg_1 = "";
-    this.arg_2 = ""; 
-    this.op = ""; 
-    this.setDisp(0);
-  },
-  
   // handle +, −, ×, and ÷ operations. 
   // We use a function instead of eval() because eval() voids engine optimizations.
   operation: function() {
@@ -256,6 +247,16 @@ var calc = {
   // reset exp_disp variable and clear exp_display on broswser
   clearExpDisp: function() {
     $("#exp_display").text("");
+  },
+  
+  // clear all data and go to default state
+  allClear: function() {
+    this.arg_1 = "";
+    this.arg_2 = ""; 
+    this.op = ""; 
+    this.clearExpDisp();
+    this.setDisp(0);
+    this.state = states.DEFAULT;
   }
 
 } // end of calc object
@@ -286,6 +287,6 @@ $("#equals").on("click", function() {
   calc.doStep(key_types.EQUALS, $(this).html());
 })
 
-("#clear").on("click", function() {
-  calc.doStep(key_types.CLEAR, $(this).html());
+$("#clear").on("click", function() {
+  calc.allClear();
 })
