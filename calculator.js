@@ -244,7 +244,7 @@ var calc = {
     $("#exp_display").text(arg1 + " " + op);
   },
   
-  // reset exp_disp variable and clear exp_display on broswser
+  // clear exp_display on broswser
   clearExpDisp: function() {
     $("#exp_display").text("");
   },
