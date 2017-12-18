@@ -194,11 +194,10 @@ var calc = {
   reverseNum: function() {
     if (this.display > 0) {
       this.display = -Math.abs(this.display);
-      this.updateDisp(this.display);
     } else if (this.display < 0) {
       this.display = Math.abs(this.display);
-      this.updateDisp(this.display);
     }
+    this.updateDisp(this.display);
   },
   
   // handle +, −, ×, and ÷ operations. 
