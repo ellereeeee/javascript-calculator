@@ -204,11 +204,13 @@ button .ripple {
 .btn {
   height: 14.28vh;
   width: 25%;
+  outline: none;
 }
 
 .big-btn {
   height: 14.28vh;
   width: 50%;
+  outline: none;
 }
 
 /*
