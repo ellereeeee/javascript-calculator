@@ -207,25 +207,19 @@ var calc = {
     switch (this.op) {
       case "+":
         this.display = Number(this.arg_1) + Number(this.arg_2);
-        this.updateDisp(this.display);
-        this.clearExpDisp();
         break;
       case "−":
         this.display = Number(this.arg_1) - Number(this.arg_2);
-        this.updateDisp(this.display);
-        this.clearExpDisp();
         break;
       case "×":
         this.display = Number(this.arg_1) * Number(this.arg_2);
-        this.updateDisp(this.display);
-        this.clearExpDisp();
         break;
       case "÷":
         this.display = Number(this.arg_1) / Number(this.arg_2);
-        this.updateDisp(this.display);
-        this.clearExpDisp();
         break;
     } // end of switch statement
+    this.updateDisp(this.display);
+    this.clearExpDisp();
   },
   
   // find arg_2 percentage of arg_1
