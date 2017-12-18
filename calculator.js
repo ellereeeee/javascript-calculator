@@ -276,3 +276,7 @@ $("#percent").on("click", function() {
 $("#equals").on("click", function() {
   calc.doStep(key_types.EQUALS, $(this).html());
 })
+
+("#clear").on("click", function() {
+  calc.doStep(key_types.CLEAR, $(this).html());
+})
