@@ -174,6 +174,10 @@ var calc = {
         if (key_type === key_types.REV) {
           this.reverseNum();
         }
+        if (key_type === key_types.DEC) {
+          this.setDisp("0.");
+          this.state = states.FIRST_ARG_FLOAT;
+        }
         break;
     } // end of switch statement
   }, // end of doStep function
