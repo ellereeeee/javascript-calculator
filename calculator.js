@@ -221,8 +221,14 @@ var calc = {
         this.display = Number(this.arg_1) / Number(this.arg_2);
         break;
     } // end of switch statement
-    this.updateDisp(this.display);
-    this.clearExpDisp();
+    console.log("solution length: " + this.display.toString().length);
+    // make sure length does not exceed 12 characters
+    if (this.display.toString().length > 12) {
+      this.allClear("Num too big");
+    } else {
+      this.updateDisp(this.display);
+      this.clearExpDisp();
+    }
   },
   
   // find arg_2 percentage of arg_1
@@ -247,12 +253,12 @@ var calc = {
   },
   
   // clear all data and go to default state
-  allClear: function() {
+  allClear: function(setDispParam) {
     this.arg_1 = "";
     this.arg_2 = ""; 
     this.op = ""; 
     this.clearExpDisp();
-    this.setDisp(0);
+    this.setDisp(setDispParam);
     this.state = states.DEFAULT;
   }
 
@@ -285,5 +291,5 @@ $("#equals").on("click", function() {
 })
 
 $("#clear").on("click", function() {
-  calc.allClear();
+  calc.allClear(0);
 })
