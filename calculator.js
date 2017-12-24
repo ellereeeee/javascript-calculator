@@ -197,7 +197,7 @@ var calc = {
   // add number to display
   appendDisp: function(key) {
     this.display += key;
-    if (this.display.toString().length > 12) {
+    if (this.display.toString().length > 11) {
       this.allClear();
       this.setExpDisp("Number is too big!");
     } else {
@@ -232,8 +232,8 @@ var calc = {
         this.display = Number(this.arg_1) / Number(this.arg_2);
         break;
     } // end of switch statement
-    // make sure length does not exceed 12 characters
-    if (this.display.toString().length > 12) {
+    // make sure length does not exceed 11 characters
+    if (this.display.toString().length > 11) {
       this.allClear();
       this.setExpDisp("Number too big!");
     } else {
