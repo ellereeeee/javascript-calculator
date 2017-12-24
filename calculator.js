@@ -156,7 +156,7 @@ var calc = {
       case states.SEC_ARG_DECIMAL:
         if (key_type === key_types.NUM) {
           this.appendDisp(key);
-          this.state = state.SEC_ARG_FLOAT;
+          this.state = states.SEC_ARG_FLOAT;
         }
         if (key_type === key_types.EQUALS) {
           this.arg_2 = this.display;
