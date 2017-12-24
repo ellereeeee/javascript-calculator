@@ -165,7 +165,7 @@ var calc = {
           this.operation();
         }
         if (key_type === key_types.OP_KEY) {
-          this.clearExpDisp();
+          this.setExpDisp();
           this.arg_1 = this.display;
           this.op = key;
           this.updateExpDisp(this.arg_1, this.op);
@@ -191,7 +191,12 @@ var calc = {
   // add number to display
   appendDisp: function(key) {
     this.display += key;
-    this.updateDisp(this.display);
+    if (this.display.toString().length > 12) {
+      this.allClear();
+      this.setExpDisp("Number is too big!");
+    } else {
+      this.updateDisp(this.display);
+    }
   },
   
   // make positive numbers negative and vice versa
@@ -221,13 +226,13 @@ var calc = {
         this.display = Number(this.arg_1) / Number(this.arg_2);
         break;
     } // end of switch statement
-    console.log("solution length: " + this.display.toString().length);
     // make sure length does not exceed 12 characters
     if (this.display.toString().length > 12) {
-      this.allClear("Num too big");
+      this.allClear();
+      this.setExpDisp("Number too big!");
     } else {
       this.updateDisp(this.display);
-      this.clearExpDisp();
+      this.setExpDisp();
     }
   },
   
@@ -247,18 +252,18 @@ var calc = {
     $("#exp_display").text(arg1 + " " + op);
   },
   
-  // clear exp_display on broswser
-  clearExpDisp: function() {
-    $("#exp_display").text("");
+  // set exp_display on browser
+  setExpDisp: function(text) {
+    $("#exp_display").text(text);
   },
   
   // clear all data and go to default state
-  allClear: function(setDispParam) {
+  allClear: function() {
     this.arg_1 = "";
     this.arg_2 = ""; 
     this.op = ""; 
-    this.clearExpDisp();
-    this.setDisp(setDispParam);
+    this.setExpDisp();
+    this.setDisp(0);
     this.state = states.DEFAULT;
   }
 
