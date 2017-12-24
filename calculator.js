@@ -38,6 +38,7 @@ var calc = {
     switch (this.state) {
       case states.DEFAULT:
         if (key_type === key_types.NUM) {
+          this.setExpDisp("");
           this.setDisp(key);
           this.state = states.FIRST_ARG;
         }
