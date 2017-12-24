@@ -232,7 +232,7 @@ var calc = {
         this.display = Number(this.arg_1) / Number(this.arg_2);
         break;
     } // end of switch statement
-    // make sure length does not exceed 11 characters
+    this.checkAndRoundFloats();
     if (this.display.toString().length > 11) {
       this.allClear();
       this.setExpDisp("Number too big!");
@@ -240,6 +240,15 @@ var calc = {
       this.updateDisp(this.display);
       this.setExpDisp("");
     }
+  },
+  
+  checkAndRoundFloats: function() {
+    // if the solution is a float and the numbers before the decimal is less than 10 (plus 1 for the decimal)
+    if (!Number.isInteger(this.display) & this.display.toFixed().toString().length < 10) {
+      // round the float to the number that remains after you substract the length of the
+      // number of whole numbers and the decimal from 11. Use the Number function to remove trailing zeroes
+      this.display = Number(this.display.toFixed(11 - this.display.toFixed().toString().length - 1)).toLocaleString();
+    } 
   },
   
   // find arg_2 percentage of arg_1
