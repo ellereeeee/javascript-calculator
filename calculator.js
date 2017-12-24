@@ -42,6 +42,11 @@ var calc = {
           this.setDisp(key);
           this.state = states.FIRST_ARG;
         }
+        if (key_type === key_types.DEC) {
+          this.setExpDisp("");
+          this.appendDisp(key);
+          this.state = states.FIRST_ARG_FLOAT;
+        }
         break;
         
       case states.FIRST_ARG:
