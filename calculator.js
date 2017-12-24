@@ -247,7 +247,7 @@ var calc = {
     if (!Number.isInteger(this.display) & this.display.toFixed().toString().length < 10) {
       // round the float to the number that remains after you substract the length of the
       // number of whole numbers and the decimal from 11. Use the Number function to remove trailing zeroes
-      this.display = Number(this.display.toFixed(11 - this.display.toFixed().toString().length - 1)).toLocaleString();
+      this.display = Number(this.display.toFixed(11 - this.display.toFixed().toString().length - 1));
     } 
   },
   
