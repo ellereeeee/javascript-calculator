@@ -171,7 +171,7 @@ var calc = {
           this.operation();
         }
         if (key_type === key_types.OP_KEY) {
-          this.setExpDisp();
+          this.setExpDisp("");
           this.arg_1 = this.display;
           this.op = key;
           this.updateExpDisp(this.arg_1, this.op);
@@ -238,7 +238,7 @@ var calc = {
       this.setExpDisp("Number too big!");
     } else {
       this.updateDisp(this.display);
-      this.setExpDisp();
+      this.setExpDisp("");
     }
   },
   
@@ -268,7 +268,7 @@ var calc = {
     this.arg_1 = "";
     this.arg_2 = ""; 
     this.op = ""; 
-    this.setExpDisp();
+    this.setExpDisp("");
     this.setDisp(0);
     this.state = states.DEFAULT;
   }
