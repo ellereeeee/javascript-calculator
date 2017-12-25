@@ -103,7 +103,6 @@ var calc = {
         if (key_type === key_types.EQUALS) {
           this.arg_2 = this.display;
           this.operation();
-          this.state = states.EQUALS;
         }
         break;
         
@@ -111,7 +110,6 @@ var calc = {
         if (key_type === key_types.EQUALS) {
           this.arg_2 = this.display;
           this.operation();
-          this.state = states.EQUALS;
         }
         if (key_type === key_types.NUM) {
           this.appendDisp(key);
@@ -149,7 +147,6 @@ var calc = {
         if (key_type === key_types.EQUALS) {
           this.arg_2 = this.display;
           this.operation();
-          this.state = states.EQUALS;
         }
         break;
         
@@ -161,7 +158,6 @@ var calc = {
         if (key_type === key_types.EQUALS) {
           this.arg_2 = this.display;
           this.operation();
-          this.state = states.EQUALS;
         }
         break;
         
@@ -183,6 +179,11 @@ var calc = {
         if (key_type === key_types.DEC) {
           this.setDisp("0.");
           this.state = states.FIRST_ARG_FLOAT;
+        }
+        if (key_type === key_types.NUM) {
+          this.setExpDisp("");
+          this.setDisp(key);
+          this.state = states.FIRST_ARG;
         }
         break;
     } // end of switch statement
@@ -239,6 +240,7 @@ var calc = {
     } else {
       this.updateDisp(this.display);
       this.setExpDisp("");
+      this.state = states.EQUALS;
     }
   },
   
