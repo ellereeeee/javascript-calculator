@@ -54,6 +54,7 @@ table {
 */
 
 html, body {
+  background-color: #CCC;
   height: 100%;
   margin: 0;
 }
