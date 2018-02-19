@@ -239,6 +239,9 @@ var calc = {
       this.allClear();
       this.setExpDisp("Number too big!");
     } else {
+      if (this.display === 0.999999999) {
+        this.display = 1;
+      }
       this.updateDisp(this.display);
       this.setExpDisp("");
       this.state = states.EQUALS;
