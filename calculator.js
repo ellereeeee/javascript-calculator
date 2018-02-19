@@ -121,6 +121,7 @@ var calc = {
           this.percentify();
         }
         if (key_type === key_types.OP_KEY) {
+          this.arg_2 = this.display;
           this.operation();
           this.arg_1 = this.display;
           this.op = key;
