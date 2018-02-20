@@ -96,6 +96,10 @@ var calc = {
           this.setDisp(key);
           this.state = states.SEC_ARG;
         }
+        if (key_type === key_types.OP_KEY) {
+          this.op = key;
+          this.updateExpDisp(this.arg_1, this.op);
+        }
         if (key_type === key_types.DEC) {
           this.setDisp("0.");
           this.state = states.SEC_ARG_DECIMAL;
