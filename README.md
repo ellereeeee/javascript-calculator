@@ -14,7 +14,7 @@ I created this for the freeCodeCamp [JavaScript calculator assignment](https://l
 
 ![Desktop view of calculator.](./screenshots/desktop_view.png)
 
-![Mobile view of calculator](./screenshots/mobile_view.png)
+![Mobile view of calculator](./screenshots/mobile_view.jpg)
 
 ## Tech Used
 
