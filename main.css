@@ -222,26 +222,26 @@ button {
   }
   /* Calculator */
   .calculator {
-    height: 70vh;
-    width: 13em;
+    height: 24.9em;
+    width: 15em;
   }
   /* Displays */
   .exp-display {
     font-size: 1em;
-    height: 6.797vh;
+    height: 2em;
   }
   .sol-display {
     font-size: 1.7em;
-    height: 13.223vh;
+    height: 2.8em;
   }
   /* Buttons */
   .btn {
     font-size: 1em;
-    height: 9.996vh;
+    height: 2.8em;
   }
   .big-btn {
     font-size: 1em;
-    height: 9.996vh;
+    height: 2.8em;
   }
 }
 
